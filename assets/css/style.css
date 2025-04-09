@@ -1,10 +1,12 @@
 /* Normalizador o  reset de css sirve para eliminar los etilos predeterminados en los navegadores */
-@charset "UTF-8";a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+@charset "UTF-8";
+a,address,article,aside,b,body,canvas,center,cite,code,div,dl,dt,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,label,li,menu,
+nav,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;/* todos los elementos heradan la familia de fuente del elemento padre*/
+    font: inherit; /* todos los elementos heradan la familia de fuente del elemento padre*/
     vertical-align: baseline /*Todos los elemntos se alinean verticalmente con la liena base del texto */
 }
 
@@ -17,10 +19,10 @@ body {
     color: rgb(255, 255, 255);
     background: url('../images/Tunel-de-manglar.jpg') no-repeat center;
     background-size: cover
-    
 }
 
-header{
+header {
+    /* background: #072142; */
     position: fixed;
     top: 0;
     left: 0;
@@ -36,11 +38,19 @@ header{
     z-index: 1000
 }
 
-a{
+.name {
+    padding: 2em 2em 0; /* background: #fff; */
+}
+
+header .global-nav {
+    padding: 2em 2em 0;
+}
+
+a {
     text-decoration: none;
 }
 
-.global-list{
+.global-list {
     list-style: none;
     display: flex;
 }
@@ -57,14 +67,10 @@ a{
     position: relative;
     color: #fff
 }
-/* Agregar efecto vidrio a la secciones */
-.wrap{
-    backdrop-filter: blur(80px);
-}
 
-.title--top{
-    text-align: center;
-    
+/* Agregar efecto vidrio a la secciones */
+.wrap {
+    backdrop-filter: blur(80px);
 }
 
 /* Efecto fade-in para el contenido */
@@ -95,4 +101,51 @@ etc...
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
+.con_top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title--top{
+    text-align: center;
+}
+
+
+.title {
+    color: #fff; /* Establece el color del texto en blanco (#fff es un atajo de #ffffff). Esto mejora la legibilidad sobre fondos oscuros. */
+    position: absolute; /* Especifica que el elemento será posicionado de forma absoluta con respecto a su primer contenedor con posición relativa. Esto permite colocarlo en cualquier parte del layout. */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del área del elemento. Esto es útil para evitar que textos largos o hijos desalineados se salgan de los límites del contenedor. */
+    top: 50%; /* Desplaza el elemento verticalmente desde la parte superior del contenedor padre hasta el 50% de su altura. Sirve para centrar verticalmente junto con transform. */
+    -webkit-transform: translate3d(0, -50%, 0); /* (Versión para navegadores WebKit como Safari) Aplica una transformación 3D que mueve el elemento 50% hacia arriba en el eje Y. Compensa el `top: 50%` para lograr centrado vertical perfecto. */
+    transform: translate3d(0, -50%, 0); /* Igual que la anterior pero sin prefijo. Estándar moderno para mover el elemento verticalmente hacia arriba la mitad de su altura. */
+    z-index: 200; /* Establece la capa en la que se muestra el elemento. Cuanto mayor el número, más arriba está visualmente. Asegura que este título esté por encima de otros elementos con menor z-index. */
+    margin-left: 11%; /* Agrega un margen izquierdo del 11% respecto al ancho del contenedor padre. Esto posiciona el elemento horizontalmente sin usar left. */
+}
+
+.image {
+    display: block;
+    position: relative;
+    width: 53.125%;
+    height: 74.81%;
+    margin: 0 8% 0 auto;
+    -webkit-box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6)
+}
+
+.image--bio{
+    background: url('../images/bio-maglar-1.jpg') no-repeat center;
+    background-size: cover
+}
+
+/* .title__text {
+    font-size: 12rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.6rem;
+    font-family: "futura_m";
+    font-weight: normal;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
+} */
