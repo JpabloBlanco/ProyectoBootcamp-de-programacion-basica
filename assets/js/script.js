@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Configuración básica
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE', // Clave gratuita
         scrollingSpeed: 800, // Velocidad del scroll
+        
         navigation: true, // Menú de puntos
+        
         navigationPosition: 'left', // Posición del menú
+        anchors :['inicio','bio','pro','solu'],
 
         // Eventos para transiciones
         onLeave: (origin, destination) => {
