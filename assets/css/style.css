@@ -140,12 +140,19 @@ etc...
     background-size: cover
 }
 
-/* .title__text {
-    font-size: 12rem;
+.title__text {
+    font-size: 3.5rem;
     line-height: 1;
     letter-spacing: 0.1em;
     margin-bottom: 1.6rem;
     font-family: "futura_m";
     font-weight: normal;
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
-} */
+}
+
+.icono-deslizar{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+}
