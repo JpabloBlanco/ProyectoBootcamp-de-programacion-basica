@@ -15,20 +15,18 @@ header,menu,nav,section {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(255, 255, 255);
 }
-.image-fondo{
+.image-fondo {
     position: fixed;      /* Se queda fijo al hacer scroll */
     top: 0;
     left: 0;
     width: 100vw;         /* 100% del ancho visible del navegador */
     height: 100vh;        /* 100% del alto visible del navegador */
     background: url('../images/Tunel-de-manglar.jpg') no-repeat center;
-    background-size: cover;   /* Color de fondo (puedes usar imágenes también) */
-    filter: brightness(0.75);
+    background-size: cover;   
+    filter: brightness(0.8);
     z-index: -1000;
-    
 }
 
 header {
@@ -50,6 +48,8 @@ header {
 
 .name {
     padding: 2em 2em 0; /* background: #fff; */
+    color: #ffffff;
+    font-family: 'Lato', serif;
 }
 
 header .global-nav {
@@ -58,6 +58,19 @@ header .global-nav {
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    width: 100%
+}
+
+p {
+    line-height: 2;
+    word-wrap: break-word;
+    white-space: normal
 }
 
 .global-list {
@@ -88,6 +101,62 @@ a {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-top {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    background: url('../images/Tunel-de-manglar.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.page-top__inner {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.page-top .image {
+    position: relative;
+    width: 60.677%;
+    height: 100vh;
+    margin: 0 0 0 auto;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.page-top .image__bio {
+    background: url('../images/bio-maglar-1.jpg') no-repeat center;
+    background-size: cover
+}
+.page-top .image__pro {
+    background: url('../images/Problemas-Manglar.jpg') no-repeat center;
+    background-size: cover
+}
+.page-top .image__solu {
+    background: url('../images/Soluciones-Manglar.jpg') no-repeat center;
+    background-size: cover
+}
+
+.back-arrow {
+    position: fixed;
+    top: 120px;
+    left: 40px;
+    display: block;
+    width: 64px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    
+    color: #fff;
+    z-index: 300
 }
 
 /* Colores de fondo para cada sección
@@ -161,14 +230,23 @@ etc...
     background-size: cover
 }
 
+.image--tabla{
+    background: url('../images/bio-tabla.png') no-repeat center;
+    background-size: cover
+}
+
 .title__text {
     font-size: 3.5rem;
     line-height: 1;
     letter-spacing: 0.1em;
     margin-bottom: 1.6rem;
-    font-family: "futura_m";
-    font-weight: normal;
+    font-family: 'Merriweather', serif;
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
+}
+
+.title__lead{
+    font-family: 'Lato', serif;
+
 }
 
 .icono-deslizar{
@@ -176,4 +254,192 @@ etc...
     z-index: 99;
     bottom: 3%;
     left: 50%;
+}
+
+.wrapper {
+    margin-bottom: 20rem;
+    position: relative;
+    z-index: 200
+}
+
+.container{
+    margin-top: 15rem
+}
+
+.heading {
+    font-size: 2rem;
+    color: #29190B;
+    letter-spacing: 0.2em;
+    font-family: "futura_m";
+    margin-right: 3.2rem;
+    padding-top: 1.2rem
+}
+
+@media screen and (max-width: 800px) {
+    .heading {
+        padding-top:0;
+        margin-right: 0
+    }
+}
+
+.heading--top {
+    padding-top: 0
+}
+
+.heading-num {
+    font-size: 3rem;
+    color: #B4C111;
+    position: relative;
+    padding-left: 6.2rem;
+    padding-right: 3.2rem;
+    
+    line-height: 1.1
+}
+
+.heading-num:after {
+    content: "";
+    width: 4.8rem;
+    height: 2px;
+    background: #29190B;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto
+}
+
+.text {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 138px;
+    margin-top: 14.4rem
+}
+
+@media screen and (max-width: 800px) {
+    .text {
+        -webkit-box-align:start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding-left: 0
+    }
+}
+
+.text--top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.text .heading-num {
+    position: absolute;
+    left: 0
+}
+
+.text__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto
+}
+
+.text__wrap--top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+@media screen and (max-width: 800px) {
+    .text__wrap--top {
+        -webkit-box-align:center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .text__wrap {
+        -webkit-box-orient:vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 10%
+    }
+}
+
+.content{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto
+}
+
+.what__wrap {
+    width: 48.333%
+}
+
+.what__name {
+    color: #29190B;
+    margin-bottom: 2.4rem
+}
+
+.what__is{
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #29190B;
+}
+.what__text {
+    margin-bottom: 1.4rem;
+    text-justify:auto;
+    color: #5c5c5c;
+    font-family: 'lato', serif;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.07em;
+
+}
+
+.what__image {
+    -webkit-box-shadow: 0px 63px 154px -20px rgba(57, 86, 14, 0.5);
+    box-shadow: 0px 63px 154px -20px rgba(35, 66, 7, 0.5);
+    margin-bottom: 4.4rem;
+}
+
+.text_top{
+    font-family: 'lato', serif;
+
+}
+.btn {
+    background-color: #B4C111; /* Verde */
+    font-family: 'lato', serif;
+    color: white;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    
+}
+
+.btn:hover {
+    background-color: #ec2236; /* Rojo */
 }
